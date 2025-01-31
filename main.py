@@ -6,7 +6,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins
+    allow_origins=["*"],  
     allow_credentials=True,
     allow_methods=["GET"],
     allow_headers=["*"],
@@ -14,9 +14,12 @@ app.add_middleware(
 
 @app.get("/", status_code=200)
 def get_info():
-    """Returns the registered email, current datetime, and GitHub URL."""
+    """
+    Returns the registered email, dynamically generated datetime (ISO 8601 UTC), and GitHub URL.
+    """
     return {
         "email": "goodnewsagijesuefe@gmail.com",
-        "timestamp": datetime.utcnow().isoformat() + "Z",  # Ensuring UTC format
+        "current_datetime": datetime.utcnow().isoformat() + "Z",  # ISO 8601 format
         "github_url": "https://github.com/goodnews22r/Public-API.git",
     }
+
