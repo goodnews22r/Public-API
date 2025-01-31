@@ -20,6 +20,6 @@ def get_info():
     return {
         "email": "goodnewsagijesuefe@gmail.com",
         "current_datetime": datetime.utcnow().isoformat() + "Z",  # ISO 8601 format
-        "github_url": "https://github.com/goodnews22r/Public-API.git",
+        "github_url": "https://github.com/goodnews22r/Public-API",
     }
 
